@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Short Tempered Shorts</string>
+    <string name="service_label">Short Tempered Shorts auto-scroll</string>
+    <string name="service_description">Swipes to the next YouTube Short or Instagram Reel automatically after the number of seconds you choose. It only looks at the screen to check that a Shorts or Reels feed is open. It does not collect, store or send any data.</string>
+</resources>

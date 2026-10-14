@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.shorttempered.shorts'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.shorttempered.shorts'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // A fixed key so each new build installs over the previous one.
+    signingConfigs {
+        shared {
+            storeFile file('signing.keystore')
+            storePassword 'shorts123'
+            keyAlias 'shorts'
+            keyPassword 'shorts123'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.shared
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
